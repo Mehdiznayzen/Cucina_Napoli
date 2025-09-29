@@ -1,28 +1,12 @@
 'use client'
 
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC } from 'react'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
 import Logo from '../Header/Logo'
-import { FooterLinkType } from '@/app/types/footerlink'
+import { FooterLinkData } from '@/utils/data'
 
 const Footer: FC = () => {
-  const [footerlink, SetFooterlink] = useState<FooterLinkType[]>([])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch('/api/data')
-        if (!res.ok) throw new Error('Failed to fetch')
-        const data = await res.json()
-        SetFooterlink(data.FooterLinkData)
-      } catch (error) {
-        console.error('Error fetching services:', error)
-      }
-    }
-    fetchData()
-  }, [])
-
   return (
     <footer className='pt-8'>
       <div className='container'>
@@ -68,7 +52,7 @@ const Footer: FC = () => {
           </div>
           <div className='col-span-2'>
             <div className='flex gap-20'>
-              {footerlink.map((product, i) => (
+              {FooterLinkData.map((product, i) => (
                 <div key={i} className='group relative col-span-2'>
                   <p className='text-black text-xl font-semibold mb-9'>
                     {product.section}

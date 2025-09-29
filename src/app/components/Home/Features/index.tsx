@@ -1,4 +1,5 @@
 'use client'
+import { FeaturesData } from '@/utils/data'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -10,24 +11,6 @@ interface Restaurant {
 }
 
 const Features = () => {
-  const [restaurants, setRestaurants] = useState<Restaurant[]>([])
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch('/api/data')
-        if (!res.ok) throw new Error('Failed to fetch')
-        const data = await res.json()
-        setRestaurants(data.Featuresdata2)
-      } catch (error) {
-        console.error('Erreur de chargement des restaurants :', error)
-      } finally {
-        setLoading(false)
-      }
-    }
-    fetchData()
-  }, [])
 
   return (
     <section id="features" className="py-20 bg-gradient-to-b from-green-50 to-white">
@@ -43,18 +26,11 @@ const Features = () => {
 
         <div
           className={`grid gap-10 ${
-            restaurants.length > 4
+            FeaturesData.length > 4
               ? 'sm:grid-cols-2 lg:grid-cols-4'
               : 'sm:grid-cols-2 lg:grid-cols-3'
           }`}>
-          {loading
-            ? Array.from({ length: 7 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="animate-pulse bg-green-100 h-64 rounded-2xl"
-                ></div>
-              ))
-            : restaurants.map((r, i) => (
+          {FeaturesData.map((r, i) => (
                 <div
                   key={i}
                   className="group bg-white rounded-3xl shadow-lg overflow-hidden border border-green-100 hover:shadow-2xl hover:-translate-y-2 transition-transform duration-300 ease-in-out">

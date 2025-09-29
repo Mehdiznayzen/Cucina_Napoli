@@ -1,5 +1,3 @@
-import { NextResponse } from 'next/server'
-
 import { HeaderItem } from '@/app/types/menu'
 import { FeaturesType, Restaurant } from '@/app/types/features'
 import { ExpertChiefType } from '@/app/types/expertchief'
@@ -7,7 +5,7 @@ import { GalleryImagesType } from '@/app/types/galleryimage'
 import { FooterLinkType } from '@/app/types/footerlink'
 import { FullMenuType } from '@/app/types/fullmenu'
 
-const HeaderData: HeaderItem[] = [
+export const HeaderData: HeaderItem[] = [
   { label: 'Commander', href: '/#' },
   { label: 'Menu', href: '/#' },
   { label: 'Offres', href: '/#' },
@@ -15,7 +13,7 @@ const HeaderData: HeaderItem[] = [
   { label: 'Suivi de commande', href: '#' },
 ]
 
-const Featuresdata2 : Restaurant[] = [
+export const FeaturesData : Restaurant[] = [
   {
     name: "CUCINA NAPOLI - Ain Diab",
     address: "N, Lot mestouna, 56 Rue 28, Casablanca 20230",
@@ -67,7 +65,7 @@ const Featuresdata2 : Restaurant[] = [
   },
 ]
 
-const ExpertChiefData: ExpertChiefType[] = [
+export const ExpertChiefData: ExpertChiefType[] = [
   {
     profession: 'Senior Chef',
     name: 'Marco Benton',
@@ -85,7 +83,7 @@ const ExpertChiefData: ExpertChiefType[] = [
   },
 ]
 
-const GalleryImagesData: GalleryImagesType[] = [
+export const GalleryImagesData: GalleryImagesType[] = [
   {
     src: '/images/Gallery/foodone.webp',
     name: 'Caesar Salad(187 Kcal)',
@@ -108,7 +106,7 @@ const GalleryImagesData: GalleryImagesType[] = [
   },
 ]
 
-const FullMenuData: FullMenuType[] = [
+export const FullMenuData: FullMenuType[] = [
   {
     name: 'Grilled Salmon',
     price: '$18.99',
@@ -149,7 +147,7 @@ const FullMenuData: FullMenuType[] = [
   },
 ]
 
-const FooterLinkData: FooterLinkType[] = [
+export const FooterLinkData: FooterLinkType[] = [
   {
     section: 'Company',
     links: [
@@ -171,14 +169,3 @@ const FooterLinkData: FooterLinkType[] = [
     ],
   },
 ]
-
-export const GET = () => {
-  return NextResponse.json({
-    HeaderData,
-    ExpertChiefData,
-    GalleryImagesData,
-    FullMenuData,
-    FooterLinkData,
-    Featuresdata2
-  })
-}

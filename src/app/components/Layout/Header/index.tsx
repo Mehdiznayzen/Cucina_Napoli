@@ -8,11 +8,9 @@ import MobileHeaderLink from './Navigation/MobileHeaderLink'
 import Signin from '@/app/components/Auth/SignIn'
 import SignUp from '@/app/components/Auth/SignUp'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import { HeaderItem } from '@/app/types/menu'
+import { HeaderData } from '@/utils/data'
 
 const Header: React.FC = () => {
-  const [headerLink, setHeaderLink] = useState<HeaderItem[]>([])
-
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [sticky, setSticky] = useState(false)
   const [isSignInOpen, setIsSignInOpen] = useState(false)
@@ -22,20 +20,6 @@ const Header: React.FC = () => {
   const signInRef = useRef<HTMLDivElement>(null)
   const signUpRef = useRef<HTMLDivElement>(null)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch('/api/data')
-        if (!res.ok) throw new Error('Failed to fetch')
-        const data = await res.json()
-        setHeaderLink(data.HeaderData)
-      } catch (error) {
-        console.error('Error fetching services:', error)
-      }
-    }
-    fetchData()
-  }, [])
 
   const handleScroll = () => {
     setSticky(window.scrollY >= 20)
@@ -91,7 +75,7 @@ const Header: React.FC = () => {
             <Logo />
           </div>
           <nav className='hidden lg:flex grow items-center gap-4 xl:gap-6  justify-center'>
-            {headerLink.map((item, index) => (
+            {HeaderData.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}
           </nav>
@@ -186,7 +170,7 @@ const Header: React.FC = () => {
             </button>
           </div>
           <nav className='flex flex-col items-start p-4'>
-            {headerLink.map((item, index) => (
+            {HeaderData.map((item, index) => (
               <MobileHeaderLink key={index} item={item} />
             ))}
             <div className='mt-4 flex flex-col space-y-4 w-full'>
