@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
 import HeaderLink from './Navigation/HeaderLink'
@@ -10,7 +9,11 @@ import SignUp from '@/app/components/Auth/SignUp'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { HeaderData } from '@/utils/data'
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onReserveClick: () => void;
+}
+
+const Header = ({ onReserveClick }: HeaderProps) => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [sticky, setSticky] = useState(false)
   const [isSignInOpen, setIsSignInOpen] = useState(false)

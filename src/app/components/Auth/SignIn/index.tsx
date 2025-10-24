@@ -4,7 +4,6 @@ import SocialSignIn from '../SocialSignIn'
 import Logo from '@/app/components/Layout/Header/Logo'
 
 const Signin = () => {
-  
   return (
     <>
       <div className='mb-10 text-center mx-auto inline-block'>

@@ -6,11 +6,9 @@ import { FooterLinkType } from '@/app/types/footerlink'
 import { FullMenuType } from '@/app/types/fullmenu'
 
 export const HeaderData: HeaderItem[] = [
-  { label: 'Commander', href: '/#' },
-  { label: 'Menu', href: '/#' },
-  { label: 'Offres', href: '/#' },
-  { label: 'Restaurants', href: '#' },
-  { label: 'Suivi de commande', href: '#' },
+  { label: 'Réserver', href: '' },
+  { label: 'Menu', href: '/MENU_LANDING_PAGE_CUCINA_NAPOLI.pdf' },
+  { label: 'Restaurants', href: '#restaurants' },
 ]
 
 export const FeaturesData : Restaurant[] = [
@@ -149,23 +147,11 @@ export const FullMenuData: FullMenuType[] = [
 
 export const FooterLinkData: FooterLinkType[] = [
   {
-    section: 'Company',
+    section: 'Cucina Napoli',
     links: [
-      { label: 'Commander', href: '/#' },
-      { label: 'Menu', href: '/#' },
-      { label: 'Offres', href: '/#' },
-      { label: 'Restaurants', href: '#' },
-      { label: 'Suivi de commande', href: '#' },
-    ],
-  },
-  {
-    section: 'Support',
-    links: [
-      { label: 'Help/FAQ', href: '/' },
-      { label: 'Press', href: '/' },
-      { label: 'Affiliates', href: '/' },
-      { label: 'Hotel owners', href: '/' },
-      { label: 'Partners', href: '/' },
+      { label: 'Réserver', href: '' },
+      { label: 'Menu', href: '/MENU_LANDING_PAGE_CUCINA_NAPOLI.pdf' },
+      { label: 'Restaurants', href: '#restaurants' },
     ],
   },
 ]

@@ -29,7 +29,9 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
           path === item.href
             ? 'text-primary '
             : ' text-black/50  hover:text-primary'
-        }`}>
+        }`}
+        target="_blank"
+      >
         {item.label}
         {item.submenu && (
           <svg

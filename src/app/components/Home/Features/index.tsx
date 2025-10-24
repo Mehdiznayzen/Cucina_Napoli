@@ -13,7 +13,7 @@ interface Restaurant {
 const Features = () => {
 
   return (
-    <section id="features" className="py-20 bg-gradient-to-b from-green-50 to-white">
+    <section id="restaurants" className="py-20 bg-gradient-to-b from-green-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-green-600 text-lg font-semibold uppercase tracking-widest">
