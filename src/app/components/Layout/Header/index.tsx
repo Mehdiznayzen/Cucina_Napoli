@@ -9,11 +9,7 @@ import SignUp from '@/app/components/Auth/SignUp'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { HeaderData } from '@/utils/data'
 
-interface HeaderProps {
-  onReserveClick: () => void;
-}
-
-const Header = ({ onReserveClick }: HeaderProps) => {
+const Header = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [sticky, setSticky] = useState(false)
   const [isSignInOpen, setIsSignInOpen] = useState(false)
@@ -79,7 +75,10 @@ const Header = ({ onReserveClick }: HeaderProps) => {
           </div>
           <nav className='hidden lg:flex grow items-center gap-4 xl:gap-6  justify-center'>
             {HeaderData.map((item, index) => (
-              <HeaderLink key={index} item={item} />
+              <HeaderLink 
+                key={index} 
+                item={item}
+            />
             ))}
           </nav>
           <div className='flex items-center gap-2 lg:gap-3'>

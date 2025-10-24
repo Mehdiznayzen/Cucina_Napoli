@@ -6,7 +6,7 @@ import { FooterLinkType } from '@/app/types/footerlink'
 import { FullMenuType } from '@/app/types/fullmenu'
 
 export const HeaderData: HeaderItem[] = [
-  { label: 'Réserver', href: '' },
+  { label: 'Réserver', href: 'https://wa.me/212664784101'},
   { label: 'Menu', href: '/MENU_LANDING_PAGE_CUCINA_NAPOLI.pdf' },
   { label: 'Restaurants', href: '#restaurants' },
 ]
@@ -149,7 +149,7 @@ export const FooterLinkData: FooterLinkType[] = [
   {
     section: 'Cucina Napoli',
     links: [
-      { label: 'Réserver', href: '' },
+      { label: 'Réserver', href: 'https://wa.me/212664784101' },
       { label: 'Menu', href: '/MENU_LANDING_PAGE_CUCINA_NAPOLI.pdf' },
       { label: 'Restaurants', href: '#restaurants' },
     ],
