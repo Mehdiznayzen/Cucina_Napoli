@@ -116,7 +116,7 @@ export default function Hero() {
               </a>
               <button
                 // onClick={() => setIsOpen(true)}
-                onClick={() => window.location.href = "https://wa.me/212664784101"}
+                onClick={() => window.open("https://wa.me/212664784101", "_blank")}
                 className="text-xl border border-primary rounded-full font-medium py-3 px-8 text-primary hover:text-white hover:bg-primary hover:cursor-pointer transition ease-in-out duration-300"
               >
                 Réserver une Table
