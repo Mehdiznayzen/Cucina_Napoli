@@ -111,7 +111,6 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-5 items-center justify-center lg:justify-start">
               <a href="/5-MENU 151125 site.pdf" target="_blank" rel="noreferrer">
                 <button
-                  // onClick={() => window.open("/index.html", "_blank")}
                   className="text-xl font-medium rounded-full text-white py-3 px-8 bg-primary hover:text-primary border border-primary hover:bg-transparent hover:cursor-pointer transition ease-in-out duration-300"
                 >
                   Voir Menu
