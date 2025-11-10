@@ -109,13 +109,15 @@ export default function Hero() {
               d’inspiration internationale — préparé avec passion, chaque jour.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 items-center justify-center lg:justify-start">
-              <a href="/MENU_LANDING_PAGE_CUCINA_NAPOLI.pdf" target="_blank" rel="noreferrer">
-                <button className="text-xl font-medium rounded-full text-white py-3 px-8 bg-primary hover:text-primary border border-primary hover:bg-transparent hover:cursor-pointer transition ease-in-out duration-300">
+              <a target="_blank" rel="noreferrer">
+                <button
+                  onClick={() => window.open("/index.html", "_blank")}
+                  className="text-xl font-medium rounded-full text-white py-3 px-8 bg-primary hover:text-primary border border-primary hover:bg-transparent hover:cursor-pointer transition ease-in-out duration-300"
+                >
                   Voir Menu
                 </button>
               </a>
               <button
-                // onClick={() => setIsOpen(true)}
                 onClick={() => window.open("https://wa.me/212664784101", "_blank")}
                 className="text-xl border border-primary rounded-full font-medium py-3 px-8 text-primary hover:text-white hover:bg-primary hover:cursor-pointer transition ease-in-out duration-300"
               >

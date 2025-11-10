@@ -1,0 +1,27 @@
+import { Poppins } from 'next/font/google'
+import '../globals.css'
+import Header from '@/app/components/Layout/Header'
+import Footer from '@/app/components/Layout/Footer'
+import ScrollToTop from '@/app/components/ScrollToTop'
+import WhatssapIcon from '../components/whatssap'
+
+const font = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+})
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <div>
+      <Header />
+      {children}
+      <Footer />
+      <WhatssapIcon />
+      <ScrollToTop />
+    </div>
+  )
+}
