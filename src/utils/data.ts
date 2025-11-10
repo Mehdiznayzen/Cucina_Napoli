@@ -7,7 +7,7 @@ import { FullMenuType } from '@/app/types/fullmenu'
 
 export const HeaderData: HeaderItem[] = [
   { label: 'Réserver', href: 'https://wa.me/212664784101'},
-  { label: 'Menu', href: '/index.html' },
+  { label: 'Menu', href: '/5-MENU 151125 site.pdf' },
   { label: 'Restaurants', href: '#restaurants' },
 ]
 
@@ -150,7 +150,7 @@ export const FooterLinkData: FooterLinkType[] = [
     section: 'Cucina Napoli',
     links: [
       { label: 'Réserver', href: 'https://wa.me/212664784101' },
-      { label: 'Menu', href: '/index.html' },
+      { label: 'Menu', href: '/5-MENU 151125 site.pdf' },
       { label: 'Restaurants', href: '#restaurants' },
     ],
   },
